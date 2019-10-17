@@ -1,19 +1,15 @@
+#! python
 ##
 ## This is just to supply a fake dadabase of price to test my code
 import numpy as np
 import pandas as pd
-import sys
-new_path = '../'
-if new_path not in sys.path:
-    sys.path.append(new_path)
-from script.input.input import *
 import sqlite3
 from datetime import datetime 
 import time 
 
 def main():
     
-    db = '../../Base Dados/fakePrices.db'
+    db = '../Dados/fakePrices.db'
     
     with sqlite3.connect(db) as conn:
         c = conn.cursor()
